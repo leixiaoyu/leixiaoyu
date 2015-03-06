@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../app');
+var app = require('../lxy-app');
 var debug = require('debug')('leixiaoyu:server');
 var http = require('http');
 
