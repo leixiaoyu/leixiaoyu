@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 	// load less contrib task package
 	grunt.loadNpmTasks('grunt-contrib-less');
+	grunt.loadNpmTasks('grunt-express-server');
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -15,6 +16,19 @@ module.exports = function(grunt) {
 					'public/stylesheets/style.css': 'public/stylesheets/style.less'
 				}
 			}
+		},
+
+		// configuration for express server
+		express: {
+			dev: {
+				options: {
+					script: './bin/www',
+					background: false
+				}
+			}
 		}
 	});
+
+	// register default task
+	grunt.registerTask('default', ['less', 'express:dev']);
 };
