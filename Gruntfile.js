@@ -42,4 +42,6 @@ module.exports = function(grunt) {
 
 	// register default task
 	grunt.registerTask('default', ['less', 'express:dev']);
+
+	grunt.registerTask('deployToAws', ['less', 'awsebtdeploy']);
 };
