@@ -29,10 +29,9 @@ bower_components
 .lock-wscript
 
 # Elastic Beanstalk Files
-
 .elasticbeanstalk/*
-
 !.elasticbeanstalk/*.cfg.yml
-
 !.elasticbeanstalk/*.global.yml
 
+# Compiled data files
+*.css
