@@ -2,6 +2,7 @@ module.exports = function(grunt) {
 	// load less contrib task package
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-express-server');
+	grunt.loadNpmTasks('grunt-awsebtdeploy');
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
@@ -25,6 +26,16 @@ module.exports = function(grunt) {
 					script: './bin/www',
 					background: false
 				}
+			}
+		},
+
+		// configuration for aws elasticbeanstalk deployment
+		awsebtdeploy: {
+			options: {
+				applicationName: 'leixiaoyu',
+				applicationCNAME: 'leixiaoyu-dev.elasticbeanstalk.com',
+				region: 'us-west-2',
+				sourceBundle: '/deployment'
 			}
 		}
 	});
