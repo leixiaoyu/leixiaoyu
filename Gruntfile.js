@@ -30,18 +30,6 @@ module.exports = function(grunt) {
 		},
 
 		// configuration for aws elasticbeanstalk deployment
-		awsebtdeploy: {
-			dev: {
-				options: {
-					applicationName: 'leixiaoyu',
-					environmentCNAME: 'leixiaoyu-dev.elasticbeanstalk.com',
-					region: 'us-west-2',
-					sourceBundle: '/deployment',
-					accessKeyId: 'AKIAJWG2FGZVEGKZEEFA',
-					secretAccessKey: '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'
-				}
-			}
-		}
 	});
 
 	// register default task
