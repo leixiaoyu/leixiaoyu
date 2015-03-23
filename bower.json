@@ -1,0 +1,33 @@
+{
+  "name": "leixiaoyu",
+  "version": "0.0.0",
+  "homepage": "https://github.com/leixiaoyu/leixiaoyu",
+  "authors": [
+    "Xiaoyu Lei <lei.raymond@outlook.com>"
+  ],
+  "description": "personal home website",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "node",
+    "angular",
+    "jade"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.3.10",
+    "angular-ui-router": "~0.2.13",
+    "bootstrap": "~3.3.2",
+    "font-awesome": "~4.3.0",
+    "jquery.easing": "~1.3.1"
+  }
+}
