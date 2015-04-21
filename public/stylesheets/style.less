@@ -14,6 +14,93 @@
 	padding: 20px 40px;
 }
 
+a {
+	color: @brand-primary;
+}
+
+a:hover,
+a:focus,
+a:active,
+a.active {
+	color: darken(@brand-primary, 10%);
+}
+
+// Projects Section
+
+#projects {
+	.project-section {
+		padding-bottom: 15%;
+	}
+    .project-item {
+        margin: 0 0 15px;
+        right: 0;
+        .project-link {
+            display: block;
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+            .project-hover {
+                background: fade(@brand-primary, 90%);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: all ease 0.5s;
+                -webkit-transition: all ease 0.5s;
+                -moz-transition: all ease 0.5s;
+                &:hover {
+                    opacity: 1;
+                }
+                .project-hover-content {
+                    position: absolute;
+                    width: 100%;
+                    height: 20px;
+                    font-size: 20px;
+                    text-align: center;
+                    top: 50%;
+                    margin-top: -12px;
+                    color: white;
+                    i {
+                        margin-top: -12px;
+                    }
+                    h3,
+                    h4 {
+                        margin: 0;
+                    }
+                }                
+            }            
+        }
+        .project-caption {
+        	max-width: 400px;
+        	margin: 0 auto;
+        	background-color: white;
+        	text-align: center;
+        	padding: 25px;
+        	h4 {
+        		text-transform: none;
+        		margin: 0;
+        	}
+        	p {
+        		.serif-font;
+        		font-style: italic;
+        		font-size: 16px;
+        		margin: 0;
+        	}
+        }
+    }
+    * {
+        z-index: 2;
+    }
+}
+
+@media(min-width:767px) {
+    #projects {
+        .project-item {
+            margin: 0 0 30px;
+        }
+    }
+}
+
 // Timeline
 .timeline {
     list-style: none;
@@ -203,6 +290,8 @@ section#contact {
 	background-image: url('/images/map-image.png');
 	background-position: center;
 	background-repeat: no-repeat;
+	margin-bottom: 25px;
+	padding-top: 15%;
 	.section-heading {
 		color: white;
 	}
@@ -222,6 +311,9 @@ section#contact {
 	.form-control:focus {
 		border-color: @brand-primary;
 		box-shadow: none;
+	}
+	.contact-form {
+		margin-bottom: 15%;
 	}
 	::-webkit-input-placeholder {
 	   .heading-font;
