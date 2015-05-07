@@ -74,13 +74,25 @@ block content
             div.timeline-image
               h4 What's </br>in the future?                
 
-  section#projects(class='content-section text-center')
+  section#projects(class='content-section text-center' ng-app='leixiaoyuHome')
     div.project-section
       div.container
         div.row
           div.col-lg-12(class='text-center')
             h2.section-heading My projects
         div.row
+          div(class='col-md-4 project-item' ng-controller='uploadController')
+            a.project-link(data-toggle='modal' ng-click='openModal()')
+              div.project-hover
+                div.project-hover-content
+                  i(class='fa fa-plus fa-3x')
+              img.img-responsive(src='images/projects/roundicons.png')
+          div(class='col-md-4 project-item')
+            a.project-link(data-toggle='modal' href='#portfolioModal1')
+              div.project-hover
+                div.project-hover-content
+                  i(class='fa fa-plus fa-3x')
+              img.img-responsive(src='images/projects/roundicons.png')
           div(class='col-md-4 project-item')
             a.project-link(data-toggle='modal' href='#portfolioModal1')
               div.project-hover
